@@ -1,0 +1,10 @@
+apiVersion: v2
+description: A Helm chart for Kubernetes
+icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/master/images/java.png
+name: environment
+version: 0.1.0-SNAPSHOT
+dependencies:
+  - name: microserviceA
+    version: 0.1.0-SNAPSHOT
+    repository: file://../Microservice_A
+# Add microservice B

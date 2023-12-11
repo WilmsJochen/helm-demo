@@ -1,0 +1,7 @@
+microserviceA:
+  image:
+    repository: environmentRepo
+    tag: environmentTag
+  config:
+    envA: env_A_value_environment
+    envB: env_B_value_environment

@@ -1,0 +1,11 @@
+image:
+  repository: desyco/docker-demo-job
+  tag: latest
+
+service:
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 8080
+
+config:
+  url: http://server-server:80

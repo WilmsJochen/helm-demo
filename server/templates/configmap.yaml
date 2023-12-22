@@ -5,5 +5,5 @@ metadata:
   labels:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 data:
-  ENVIRONMENT_VARIABLE_A: {{ .Values.config.envA }}
-  ENVIRONMENT_VARIABLE_B: {{ .Values.config.envB }}
+  PORT: "{{ .Values.service.internalPort }}"
+  MESSAGE: {{ .Values.config.message }}

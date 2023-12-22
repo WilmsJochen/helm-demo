@@ -5,6 +5,4 @@ metadata:
   labels:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 data:
-{{ range $valueName, $value := .Values.config }}
-  {{ $valueName }}: {{ $value }}
-{{- end}}
+  URL: {{ .Values.config.url }}

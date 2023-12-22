@@ -4,7 +4,9 @@ icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/master/imag
 name: environment
 version: 0.1.0-SNAPSHOT
 dependencies:
-  - name: microserviceA
-    version: 0.1.0-SNAPSHOT
-    repository: file://../Microservice_A
-# Add microservice B
+  - name: server
+    version: 0.0.1
+    repository: file://../server
+  - name: job
+    version: 0.0.1
+    repository: oci://registry-1.docker.io/desyco

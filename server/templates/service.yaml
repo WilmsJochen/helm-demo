@@ -3,12 +3,8 @@ kind: Service
 metadata:
   name: {{ template "fullname" . }}
   labels:
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
-    app: {{ .Chart.Name }}
-{{- if .Values.service.annotations }}
-  annotations:
-{{ toYaml .Values.service.annotations | indent 4 }}
-{{- end }}
+    app: {{ template "fullname" . }}
+    chart: {{ .Chart.Name }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -17,4 +13,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: {{ .Chart.Name }}
+    app:  {{ template "fullname" . }}

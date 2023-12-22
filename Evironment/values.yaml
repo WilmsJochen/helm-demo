@@ -1,7 +1,11 @@
-microserviceA:
-  image:
-    repository: environmentRepo
-    tag: environmentTag
+
+server:
   config:
-    envA: env_A_value_environment
-    envB: env_B_value_environment
+    message: "Enironment correctly deployed. Happy helming!!!!!"
+
+job:
+  image:
+    repository: desyco/docker-demo-job
+    tag: latest
+  config:
+    url: http://env-server:80

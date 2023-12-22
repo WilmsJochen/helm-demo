@@ -1,0 +1,12 @@
+replicaCount: 1
+image:
+  repository: desyco/docker-demo
+  tag: latest
+
+service:
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 8080
+
+config:
+  message: "Happy helming !!!!!"

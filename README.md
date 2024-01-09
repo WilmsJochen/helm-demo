@@ -2,7 +2,9 @@
 This repo contains helm chart to demo the use case of helm and showcase some handy features in the charts.
 
 ## Environment
-You can execute this exercise on all machines, but if you do not have the helm binary installed, you could use the playgrounds of following website.
+You can execute this exercise on all machines. Install helm following this guide:
+https://helm.sh/docs/intro/install/
+If you do not manage to install the helm binary, you could use the playgrounds of killercoda.
 https://killercoda.com/playgrounds/scenario/kubernetes
 
 ## Instructions
@@ -94,7 +96,7 @@ kubectl get configmap server-server -oyaml
 5) Package and push chart to the dockerhub registry.
 ```
 helm package .
-helm push server-0.0.1.tgz  oci://registry-1.docker.io/desyco
+helm push server-<VERSION>.tgz  oci://registry-1.docker.io/<YOUR_DOCKERHUB_NAME>
 ```
 
 ### Pull and install job chart.
@@ -122,6 +124,7 @@ The environment chart has dependencies on helm charts of the server and the job.
 
 1) Have a look at the chart.yaml file
 ```
+cd ../Evironment
 cat Chart.yaml
 ```
 

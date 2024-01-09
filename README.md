@@ -6,6 +6,15 @@ You can execute this exercise on all machines. Install helm following this guide
 https://helm.sh/docs/intro/install/
 If you do not manage to install the helm binary, you could use the playgrounds of killercoda.
 https://killercoda.com/playgrounds/scenario/kubernetes
+NOTE: Please install the correct helm version in the killercoda platform
+```
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+$ /usr/local/bin/helm version
+version.BuildInfo{Version:"v3.13.1", GitCommit:"3547a4b5bf5edb5478ce352e18858d8a552a4110", GitTreeState:"clean", GoVersion:"go1.20.8"}
+
+```
 
 ## Instructions
 
